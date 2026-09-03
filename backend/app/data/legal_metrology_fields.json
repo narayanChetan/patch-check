@@ -1,0 +1,84 @@
+{
+  "_source": "Legal Metrology (Packaged Commodities) Rules, 2011 — Rule 6(1)(a)-(g), Rule 6(2), Rule 7, Rule 9",
+  "_note": "Font-size minimums in mm are drawn from Rule 7, Table I (by net quantity) and apply to the retail sale price and net quantity numerals specifically.",
+  "fields": [
+    {
+      "key": "manufacturer",
+      "label": "Name & address of manufacturer/packer/importer",
+      "rule": "Rule 6(1)(a)",
+      "required": true,
+      "label_patterns": ["manufactured by", "mfd by", "packed by", "marketed by", "imported by", "manufacturer", "packer"],
+      "value_pattern": null,
+      "guidance": "If a company name/address appears with no qualifying word, it is presumed to be the manufacturer under Explanation 1 to Rule 6(1)(a)."
+    },
+    {
+      "key": "generic_name",
+      "label": "Common/generic name of the commodity",
+      "rule": "Rule 6(1)(b)",
+      "required": true,
+      "label_patterns": null,
+      "value_pattern": null,
+      "guidance": "Usually the product name itself (e.g. 'Refined Sunflower Oil'). Checked heuristically — presence of any recognizable product-type word.",
+      "heuristic_only": true
+    },
+    {
+      "key": "net_quantity",
+      "label": "Net quantity (standard unit of weight/measure/number)",
+      "rule": "Rule 6(1)(c)",
+      "required": true,
+      "label_patterns": ["net qty", "net quantity", "net wt", "net weight", "net contents", "contents"],
+      "value_pattern": "\\b\\d+(\\.\\d+)?\\s?(g|gm|gms|gram|grams|kg|kilogram|kilograms|ml|millilitre|millilitres|milliliter|milliliters|l|litre|litres|liter|liters|n|u)\\b|\\b\\d+\\s?(tablets?|tabs?|capsules?|caps?|pieces?|pcs?|units?|sachets?|strips?|nos?\\.?)\\b|\\b\\d+\\s?['’]s\\b",
+      "guidance": "Must be in SI units (Rule 13) — gram/kilogram/millilitre/litre, not ounces/pounds."
+    },
+    {
+      "key": "mfg_date",
+      "label": "Month & year of manufacture/packing/import",
+      "rule": "Rule 6(1)(d)",
+      "required": true,
+      "label_patterns": ["mfg", "manufactured", "packed on", "packing date", "month & year", "month and year", "pkd"],
+      "value_pattern": "\\b(0?[1-9]|1[0-2])\\s?[/\\-.]\\s?\\d{2,4}\\b|\\b(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\\.?\\s?['’]?\\d{2,4}\\b",
+      "guidance": "Exempt for bidis, incense sticks, and PSU-marketed domestic LPG cylinders (Rule 6(1) proviso)."
+    },
+    {
+      "key": "mrp",
+      "label": "Maximum Retail Price (MRP), inclusive of all taxes",
+      "rule": "Rule 6(1)(e), Rule 2(m)",
+      "required": true,
+      "label_patterns": ["mrp", "m.r.p", "maximum retail price", "max retail price", "max. retail price"],
+      "value_pattern": "(₹|rs\\.?|inr)\\s?[\\d,]+(\\.\\d{1,2})?",
+      "requires_inclusive_phrase": true,
+      "guidance": "Rule 2(m) requires the exact form 'MRP Rs.___ incl. of all taxes' or similar — price alone without the tax-inclusive qualifier is non-standard."
+    },
+    {
+      "key": "consumer_care",
+      "label": "Consumer care name, address, phone/email",
+      "rule": "Rule 6(2)",
+      "required": true,
+      "label_patterns": ["consumer care", "customer care", "customer support", "for complaints", "toll free", "toll-free"],
+      "value_pattern": "(\\d{10}\\b)|(\\d{3,4}[-\\s]\\d{3,4}[-\\s]?\\d{0,4})|([\\w.+-]+@[\\w-]+\\.[a-z]{2,})",
+      "guidance": "A distinct requirement from Rule 6(1) — must give a name, address, phone or email for complaints."
+    },
+    {
+      "key": "country_of_origin",
+      "label": "Country of origin (imported goods)",
+      "rule": "Rule 6(1)(a) proviso / Legal Metrology Order on COO",
+      "required": false,
+      "label_patterns": ["country of origin", "made in", "product of"],
+      "value_pattern": null,
+      "guidance": "Only mandatory for imported packages; not applicable to domestically manufactured goods."
+    }
+  ],
+  "font_size_table_mm": {
+    "_source": "Rule 7, Table I — minimum numeral height for RSP and net quantity declarations",
+    "rows": [
+      {"max_net_quantity_g_or_ml": 200, "min_height_mm": 1},
+      {"max_net_quantity_g_or_ml": 500, "min_height_mm": 2},
+      {"max_net_quantity_g_or_ml": null, "min_height_mm": 4, "note": "above 500 g/ml"}
+    ]
+  },
+  "manner_rules": {
+    "language": "Rule 9(4): declarations must be in Hindi (Devanagari) or English.",
+    "contrast": "Rule 9(1)(b): RSP and net quantity numerals must be printed in a colour contrasting with the background.",
+    "legibility": "Rule 9(1)(a): every declaration must be legible and prominent."
+  }
+}

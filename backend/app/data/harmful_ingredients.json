@@ -1,0 +1,96 @@
+{
+  "_disclaimer": "This list flags ingredients that carry documented FSSAI restrictions, mandatory warning-label requirements, or recognized health concerns. It is an informational aid, not a certified food-safety audit. Indian labels list ingredients by descending proportion, not exact quantity, so 'quantity' below is best-effort (only shown where a percentage or mg value appears adjacent to the ingredient in the OCR text).",
+  "ingredients": [
+    {
+      "id": "potassium_bromate",
+      "match": ["potassium bromate", "kbro3", "bromate"],
+      "severity": "high",
+      "reason": "Banned by FSSAI in 2016 for use in bread and bakery products. Classified as a possible human carcinogen (IARC Group 2B); linked to thyroid and kidney tumours in animal studies.",
+      "regulation": "FSSAI notification banning potassium bromate as a flour treatment agent, 2016"
+    },
+    {
+      "id": "potassium_iodate",
+      "match": ["potassium iodate"],
+      "severity": "medium",
+      "reason": "Also restricted as a bread improver alongside potassium bromate under the same 2016 FSSAI action, pending safety review.",
+      "regulation": "FSSAI 2016 bakery flour-treatment restriction"
+    },
+    {
+      "id": "trans_fat_phv",
+      "match": ["partially hydrogenated vegetable oil", "partially hydrogenated oil", "vanaspati", "trans fat"],
+      "severity": "high",
+      "reason": "Industrial trans fats are linked to cardiovascular disease. FSSAI caps trans fat at 2% of total fat in oils/fats and food products; products may only claim 'trans-fat-free' below 0.2g per 100g.",
+      "regulation": "Food Safety and Standards (Prohibition and Restriction on Sales) Regulations, 2011 (trans-fat limit amendment)"
+    },
+    {
+      "id": "msg",
+      "match": ["monosodium glutamate", "msg", "e621", "e 621", "ajinomoto"],
+      "severity": "low",
+      "reason": "Permitted, but FSSAI mandates a warning that it is 'not recommended for infants below 12 months and pregnant women.' Flagged here to confirm that warning is present.",
+      "regulation": "FSSAI labelling requirement for MSG-containing foods"
+    },
+    {
+      "id": "aspartame",
+      "match": ["aspartame", "e951", "e 951"],
+      "severity": "medium",
+      "reason": "Banned in foods intended for infants/young children. In general foods it is permitted but must carry a caution label; the WHO's IARC has classified it as 'possibly carcinogenic to humans' (Group 2B) pending further study.",
+      "regulation": "FSSAI restriction on artificial sweeteners in infant food; general-food caution label requirement"
+    },
+    {
+      "id": "saccharin",
+      "match": ["saccharin", "e954", "e 954"],
+      "severity": "low",
+      "reason": "Permitted with a mandatory caution label in general food; banned in infant and young-child foods.",
+      "regulation": "FSSAI artificial sweetener labelling rule"
+    },
+    {
+      "id": "sodium_benzoate",
+      "match": ["sodium benzoate", "e211", "e 211"],
+      "severity": "medium",
+      "reason": "A common preservative; specifically restricted from use in sweets and desserts under FSSAI rules, and can form benzene (a carcinogen) when combined with ascorbic acid (Vitamin C) under heat/light.",
+      "regulation": "FSSAI restriction on preservatives in sweets/mithai categories"
+    },
+    {
+      "id": "tartrazine",
+      "match": ["tartrazine", "e102", "e 102", "fd&c yellow 5", "yellow 5"],
+      "severity": "medium",
+      "reason": "A synthetic azo dye permitted up to 100 mg/kg by FSSAI, but associated with hyperactivity in children in some studies and a known trigger for allergic/asthmatic reactions in sensitive individuals.",
+      "regulation": "FSSAI Food Product Standards and Food Additives Regulations, 2011 — synthetic colour MPL"
+    },
+    {
+      "id": "sunset_yellow",
+      "match": ["sunset yellow", "e110", "e 110"],
+      "severity": "medium",
+      "reason": "Synthetic azo colour permitted within limits; linked in some studies to hyperactivity in children and allergic reactions.",
+      "regulation": "FSSAI synthetic colour Maximum Permitted Level regulation"
+    },
+    {
+      "id": "sodium_nitrite",
+      "match": ["sodium nitrite", "e250", "e 250"],
+      "severity": "high",
+      "reason": "Used as a preservative in processed/cured meats. Can form nitrosamines (carcinogenic) during cooking at high heat; the WHO classifies processed meat containing nitrites as a Group 1 carcinogen risk factor.",
+      "regulation": "FSSAI permitted preservative with maximum limit; WHO/IARC processed-meat classification"
+    },
+    {
+      "id": "bha_bht",
+      "match": ["bha", "butylated hydroxyanisole", "bht", "butylated hydroxytoluene", "e320", "e321"],
+      "severity": "medium",
+      "reason": "Synthetic antioxidant preservatives; animal studies have raised concerns about endocrine disruption and carcinogenicity at high doses, though permitted at low levels by FSSAI.",
+      "regulation": "FSSAI permitted antioxidant with Maximum Permitted Level"
+    },
+    {
+      "id": "hfcs",
+      "match": ["high fructose corn syrup", "hfcs"],
+      "severity": "low",
+      "reason": "Now standardised for use by FSSAI (2024 amendment), but linked in nutrition research to higher risk of obesity and metabolic syndrome when consumed in excess.",
+      "regulation": "FSS (Food Products Standards and Food Additives) Amendment Regulations, 2024"
+    },
+    {
+      "id": "calcium_carbide",
+      "match": ["calcium carbide"],
+      "severity": "high",
+      "reason": "Banned for use as a fruit-ripening agent — releases arsenic and phosphorus residues linked to neurological damage and is a criminal offence under the FSS Act if detected.",
+      "regulation": "FSS Act, 2006 — banned ripening agent"
+    }
+  ]
+}

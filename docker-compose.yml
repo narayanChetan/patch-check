@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      - JWT_SECRET_KEY=change-this-in-production
+      - CORS_ORIGINS=http://localhost:5173,http://localhost:80
+    volumes:
+      - packcheck_data:/app/data_store
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+
+volumes:
+  packcheck_data:
